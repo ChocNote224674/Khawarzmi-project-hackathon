@@ -1,0 +1,137 @@
+/* Reset */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: url('assets/bg.png') no-repeat center center/cover;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Left Section Styling */
+.left-section {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcebf0;
+    padding: 20px;
+}
+
+.logo {
+    width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(4px 4px 10px rgba(73, 1, 69, 0.6)); /* Ombre directe sur l'image */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Importation de la police */
+
+.site-name {
+    font-size: 2.5rem; /* Taille légèrement augmentée pour mettre en valeur */
+    color: #dd1158; /* Mauve */
+    margin-bottom: 10px;
+    font-family: 'Great Vibes', cursive; /* Utilisation de la nouvelle police */
+    text-align: center;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    color: #dd1158; /* Mauve */
+    font-style: italic;
+    text-align: center;
+    font-family: 'Great Vibes', cursive; /* Uniformité avec le nom du site */
+}
+
+
+/* Login Box Styling */
+.login-box {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.login-box h1 {
+    font-size: 2rem;
+    color: #d63384;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-box input {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.login-box input:focus {
+    border-color: #dd1158;
+    background-color: #ffffff;
+}
+
+.login-box button {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    background-color: #d8106d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #c2186b;
+}
+
+#notificationPanel {
+    position: fixed;
+    top: 8%;
+    right: 2%;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+#notificationPanel.hidden {
+    display: none;
+}

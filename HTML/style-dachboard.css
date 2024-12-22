@@ -1,0 +1,391 @@
+/* General Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe4e9, #ffffff);
+    height: 100vh;
+    display: flex;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 250px;
+    background: linear-gradient(to bottom, #ffd1de, #c2186b);
+    color: #c2186b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.navbar ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.navbar li {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #c2186b;
+}
+
+/* Main Content Layout */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #d63384;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Content Layout */
+.content-layout {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Patients Section */
+.patients-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 70%;
+}
+
+.patient-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.patient-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* View Button */
+.view-btn {
+    background-color: #d63384;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.view-btn:hover {
+    background-color: #c2186b;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.calendar, .notes {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notes textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.modal-content button {
+    background-color: #d63384;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.modal-content button:hover {
+    background-color: #c2186b;
+}
+
+/* Logo Styling in Navbar */
+.logo-container {
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 70%;
+    margin-bottom: 20px;
+}
+
+.navbar-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50%; /* Facultatif pour arrondir l'image */
+    filter: drop-shadow(4px 4px 10px rgba(73, 1, 69, 0.5));
+}
+
+.patient-card img {
+    width: 40%; /* Réduction de la largeur (ajustez selon vos besoins) */
+    height: auto; /* Maintien du ratio de l'image */
+    margin: 0 auto; /* Centrage horizontal */
+    display: block; /* Nécessaire pour appliquer le centrage */
+    border-radius: 10px; /* Facultatif, coins arrondis */
+}
+#calendar {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.calendar .fc-toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+    margin-bottom: 10px;
+}
+
+.calendar .fc-toolbar-chunk {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Centre les éléments dans leur section */
+}
+
+.calendar .fc-toolbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d63384; /* Rose vif pour le titre */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.calendar .fc-button-group {
+    display: flex;
+    gap: 5px;
+}
+
+.calendar .fc-button {
+    background-color: #ffd1de; /* Rose clair */
+    color: #d63384; /* Rose vif pour le texte */
+    border: 1px solid #d63384;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.calendar .fc-button:hover {
+    background-color: #ffb8d4; /* Rose clair légèrement plus foncé */
+    transform: scale(1.05);
+}
+
+.calendar .fc-prev-button,
+.calendar .fc-next-button {
+    background-color: #ffd1de; /* Rose clair pour les flèches */
+    color: #d63384; /* Rose vif pour le texte des flèches */
+    border: 1px solid #d63384;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.calendar .fc-prev-button:hover,
+.calendar .fc-next-button:hover {
+    background-color: #ffb8d4; /* Rose clair foncé au survol */
+}
+.calendar .fc-button.fc-button-active {
+    background-color: #d63384 !important; /* Rose vif */
+    color: #ffffff !important; /* Blanc pour le texte */
+    border: 1px solid #d63384 !important;
+    box-shadow: none !important; /* Supprime les ombres si présentes */
+}
+
+/* Notifications Panel toujours visible */
+.notification-panel {
+    display: block; /* Toujours affiché */
+    position: absolute; /* Position absolue pour placer le panneau où vous le souhaitez */
+    top:200px; /* Ajustez pour aligner sous la navbar */
+    left:200px; /* Ajustez pour aligner sous le bouton Notifications */
+    width: 300px; /* Largeur du panneau */
+    background-color: #ffffff; /* Couleur de fond */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    z-index: 1000; /* Toujours au-dessus des autres éléments */
+}
+
+/* Notifications Header */
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffd1de; /* Couleur de l'en-tête */
+    color: #d63384; /* Texte rose vif */
+    border-bottom: 1px solid #ddd; /* Bordure en bas de l'en-tête */
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Notifications Content */
+.notification-content {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Notification Items */
+.notification-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Bouton de fermeture */
+.notification-header .close-btn {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #c2186b;
+}
+.close-btn {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #d63384}
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style-dachboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Navbar Section -->
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="assets/logo1.png" alt="Dashboard Logo" class="navbar-logo">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Activities</a></li>
+                <!-- Bouton Notifications -->
+                <li><a href="#" id="notificationsButton">Your Doctor</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+
+
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a patient...">
+                <button>Search</button>
+            </div>
+
+            <div class="content-layout">
+                <!-- Patients Section -->
+                <div class="patients-container">
+                    <div class="patient-card">
+                        <img src="assets/1.png" alt="Patient 1">
+                        <div class="card-content">
+                            <h3>Patient 1</h3>
+                            <p><strong>Next Appointment:</strong> 2025-01-10</p>
+                            <button class="view-btn" onclick="openForm('Patient 1')">View</button>
+                        </div>
+                    </div>
+                    <div class="patient-card">
+                        <img src="assets/2.png" alt="Patient 2">
+                        <div class="card-content">
+                            <h3>Patient 2</h3>
+                            <p><strong>Next Appointment:</strong> 2025-02-12</p>
+                            <button class="view-btn" onclick="openForm('Patient 2')">View</button>
+                        </div>
+                    </div>
+                    <div class="patient-card">
+                        <img src="assets/3.png" alt="Patient 3">
+                        <div class="card-content">
+                            <h3>Patient 3</h3>
+                            <p><strong>Next Appointment:</strong> 2024-12-23</p>
+                            <button class="view-btn" onclick="openForm('Patient 3')">View</button>
+                        </div>
+                    </div>
+                    <div class="patient-card">
+                        <img src="assets/4.png" alt="Patient 4">
+                        <div class="card-content">
+                            <h3>Patient 4</h3>
+                            <p><strong>Next Appointment:</strong> 2024-12-26</p>
+                            <button class="view-btn" onclick="openForm('Patient 4')">View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panel -->
+                <div class="right-panel">
+                    <!-- Calendar Section -->
+                    <div class="calendar">
+                        <h3>Appointments Calendar</h3>
+                        <div id="calendar"></div>
+                    </div>
+
+                    <!-- Notes Section -->
+                    <div class="notes">
+                        <h3>Notes</h3>
+                        <textarea placeholder="Write your notes here..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- Modal Form -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeForm()">&times;</span>
+            <h2>Patient Details</h2>
+            <form id="patientForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required>
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+
+                <label for="symptoms">Measured Symptoms:</label>
+                <textarea id="symptoms" name="symptoms" rows="3" required></textarea>
+
+                <label for="family-history">Family History (if any):</label>
+                <textarea id="family-history" name="family-history" rows="3"></textarea>
+
+                <button type="button" onclick="saveData()">Save</button>
+            </form>
+        </div>
+    </div>
+
+    
+
+    <script src="notifications.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="./script/FullCalendar.js"></script>
+</body>
+</html>
+
