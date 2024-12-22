@@ -1,0 +1,11 @@
+Assistant: Have you noticed any changes in the size or shape of your breasts?
+User: vbn,;:
+Assistant: Do you experience any pain or discomfort in your breasts?
+User: ml
+Assistant: Have you noticed any lumps or bumps in your breasts that were not there before?
+User: kk
+Assistant: Are you aware of any family history of breast cancer?
+User: mm
+Assistant: Do you perform regular breast self-examinations?
+User: ll
+Assistant: Thank you for answering. Feel free to ask any additional questions.

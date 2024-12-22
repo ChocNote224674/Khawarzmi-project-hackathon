@@ -11,31 +11,16 @@ load_dotenv()
 # Retrieve the API key from the .env file
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-
+"""
 def generate_medical_report(file):
     prompt_template = PromptTemplate(
 
             template = f""""You are a medical assistant AI. Based on the following responses to medical questions, generate a detailed and structured medical report. The report should be formatted in the following sections:
-
-            1. Observation: Summarize any significant changes in the patient's condition, including breast size, shape, or any related symptoms.
-            2. Pain: Mention any pain or discomfort reported by the patient.
-            3. Skin Changes: Note any changes in the appearance or texture of the breast skin.
-            4. Lumps: Summarize any lumps or masses felt by the patient during self-examination.
-            5. Nipple Discharge: Mention if there is any nipple discharge or changes in nipple appearance.
-            6. Appearance: Summarize any changes in the overall appearance of the breasts, such as dimpling or puckering.
-            7. Family History: If relevant, include the patient's family history of breast cancer.
-            8. Self-Examination: Note whether the patient has been performing regular breast self-examinations.
-            9. Tenderness: Summarize any tenderness or sensitivity reported by the patient.
-            10. Lymph Nodes: Mention any changes in the size or appearance of the lymph nodes in the underarm area.
-
-        
-
-            Generated Medical Report:
             """)
     chain = LLMChain(prompt=prompt_template)
     reformulated_question = chain.run({"question": "you have to generate a medical report"})
     return reformulated_question.strip()
-
+"""
 class SingleQuestionReformulationAgent:
     def __init__(self, llm):
         self.llm = llm
